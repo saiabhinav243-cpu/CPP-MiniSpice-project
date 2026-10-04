@@ -14,6 +14,7 @@ protected:
     int nodeA, nodeB;
 public:
     Component(string n, int a, int b) : name(n), nodeA(a), nodeB(b) {}
+    virtual ~Component() {};
     virtual Complex getImpedance(double freq) const = 0;
     virtual double getValue() const = 0;
     virtual string getType() const = 0;

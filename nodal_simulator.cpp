@@ -1,10 +1,7 @@
 #include "nodal_simulator.h"
 using namespace std;
 
-    Eigen::VectorXcd NodalSimulator::solve(
-        const Circuit& circuit,
-        double freq
-    ) {
+    vector<complex<double>> NodalSimulator::solve(const Circuit& circuit, double freq) {
 
         int N = circuit.getNumNodes();
 
@@ -69,5 +66,7 @@ using namespace std;
         }
 
         // Solve A*x = b
-        return A.colPivHouseholderQr().solve(b);
+        Eigen::VectorXcd x = A.colPivHouseholderQr().solve(b);
+        vector<complex<double>> result(x.data(), x.data() + x.size());
+        return result;
     }

@@ -1,15 +1,16 @@
 #ifndef NODAL_SIMULATOR_H
 #define NODAL_SIMULATOR_H
 
-#include "Circuit.h"
+#include "simulator.h"
 #include <Eigen/Dense>
+#include <vector>
+#include <complex>
 
-class NodalSimulator {
+using namespace std;
+
+class NodalSimulator : public ISimulator {
 public:
-    Eigen::VectorXcd solve(
-        const Circuit& circuit,
-        double freq
-    );
+    vector<complex<double>> solve(const Circuit& circuit, double freq) override;
 };
 
 #endif
