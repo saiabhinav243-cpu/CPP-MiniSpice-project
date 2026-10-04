@@ -13,4 +13,4 @@ cmake -S . -B  build
 cmake --build build -j$(nproc)
 ./build/MiniSPICE
 
-to run this we have a few dependencies thye are cmake 
+
