@@ -3,6 +3,7 @@
 Use the Following Command to Run the CLI Version of the Project.
 ```bash
 g++ -std=c++14 -D_USE_MATH_DEFINES main_CLI.cpp component.cpp circuit.cpp nodal_simulator.cpp analysis.cpp -I . -o minispice.exe
+.\minispice.exe
 ```
 (Updating Command to new One to support the usage of M_PI)
 
