@@ -10,4 +10,4 @@ void Circuit::addComponent(unique_ptr<Component> comp) {
     components.push_back(move(comp));
 }
 int Circuit::getNumNodes() { return numNodes; }
-const auto& Circuit::getComponents() const { return components; }
+const auto& Circuit::getComponents() { return components; }
