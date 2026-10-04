@@ -12,8 +12,8 @@ class Circuit {
     int numNodes = 0;
 public:
     void addComponent(unique_ptr<Component> comp);
-    int getNumNodes();
-    const auto& getComponents();
+    int getNumNodes() const;
+    const vector<unique_ptr<Component>>& getComponents() const;
 };
 
 #endif

@@ -1,7 +1,9 @@
-#include <iostream>
+#ifndef COMPONENT_H
+#define COMPONENT_H
+
 #include <string>
 #include <complex>
-using string = std::string;
+using namespace std;
 
 using Complex = complex<double>;
 
@@ -17,7 +19,9 @@ public:
     virtual string getType() const = 0;
     virtual bool isVoltageSource() const { return false; }
     int getNodeA() const { return nodeA; }
-    int getNodeB() const { return nodeB; } 
+    int getNodeB() const { return nodeB; }
+    string getName() const { return name;}
+
 };
 
 class Resistor : public Component {
@@ -56,3 +60,5 @@ public:
     double getValue() const override;
     bool isVoltageSource() const override;
 };
+
+#endif

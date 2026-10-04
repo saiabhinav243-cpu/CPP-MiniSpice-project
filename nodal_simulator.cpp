@@ -1,7 +1,7 @@
 #include "nodal_simulator.h"
 using namespace std;
 
-    Eigen::VectorXcd solve(
+    Eigen::VectorXcd NodalSimulator::solve(
         const Circuit& circuit,
         double freq
     ) {

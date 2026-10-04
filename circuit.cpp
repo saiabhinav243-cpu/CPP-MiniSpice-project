@@ -9,5 +9,5 @@ void Circuit::addComponent(unique_ptr<Component> comp) {
 }
     components.push_back(move(comp));
 }
-int Circuit::getNumNodes() { return numNodes; }
-const auto& Circuit::getComponents() { return components; }
+int Circuit::getNumNodes() const { return numNodes; }
+const vector<unique_ptr<Component>>& Circuit::getComponents() const { return components; }
